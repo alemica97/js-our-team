@@ -16,6 +16,17 @@
 const teamContainer = document.querySelector('.team-container');
 console.log(teamContainer.innerHTML);
 
+const memberName = document.getElementById('name');
+console.log(memberName);
+
+const memberRole = document.getElementById('role');
+console.log(memberRole);
+
+const memberImg = document.getElementById('image');
+console.log(memberImg);
+
+const addMemberButton = document.getElementById('addMemberButton');
+console.log(addMemberButton);
 //creo un array composto da più oggetti
 //ogni oggetto rappresenta un membro del team
 const team = [
@@ -51,17 +62,17 @@ const team = [
     },
   ];
 
-function createMember(){
+function createMember(name, role, img){
     return{
-        name: 'Boba Fett',
-        role: 'Mandalorian',
-        image: 'new-team-member-02.jpg'
+        name: `${name}`,
+        role: `${role}`,
+        image: `${img}`
     }
 }
 
 console.log(createMember());
 
-const newMember = createMember();
+const newMember = createMember('Alessandro','Director','new-team-member-02.jpg');
 
 team.push( newMember );
 console.log(team);
